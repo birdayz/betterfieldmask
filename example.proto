@@ -1,0 +1,20 @@
+syntax = "proto3";
+package betterfieldmask;
+
+option go_package = "github.com/birdayz/betterfieldmask";
+
+message Example {
+  string some_string = 1;
+  string some_other_string = 2;
+}
+
+message TestRoot {
+  message Nested {
+    Example example = 1;
+    string some_string = 2;
+    repeated string some_repeated_string = 3;
+    map<string,string> string_map = 4;
+  }
+
+  Nested nested = 1;
+}

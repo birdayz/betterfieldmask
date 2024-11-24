@@ -1,0 +1,11 @@
+version: v2
+modules:
+  - path: .
+    name: buf.build/birday/betterfieldmask
+    lint:
+      use:
+        - DEFAULT
+    breaking:
+      use:
+        - FILE
+        - WIRE
